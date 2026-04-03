@@ -6,7 +6,7 @@ public class Factorial{
         Scanner scan=new Scanner(System.in);
         int n=scan.nextInt();
         int fact=factoialNumber(n);
-        System.out.println("Fatctorial of "+n+" is "+fact);
+        System.out.println("Fatctorial of"+n+" is "+fact);
         scan.close();
     }
     public static int factoialNumber(int  n){
