@@ -1,0 +1,5 @@
+method overloading 
+    same function name different parameters
+method overriding
+    same function name but different statement 
+    resolved using the object for which it is called

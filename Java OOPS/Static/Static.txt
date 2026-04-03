@@ -1,0 +1,60 @@
+build-your-own-x
+
+static variable
+    -belongs to the class
+    -shared by all the instances 
+    -Memory allocated once when the class loads
+    -Does not require the object to be created for access
+
+static methods 
+    -can be called without creating class instance
+    -can access only the static variables
+    -cannot use this keyword
+
+public class Student {
+    // Static variable
+    private static int totalStudents = 0;
+    // Instance variable
+    private String name;
+    
+    public Student(String name) {
+        this.name = name;
+        totalStudents++; // Increments for each new student
+    }
+    
+    public static int getTotalStudents() {
+        return totalStudents;
+    }
+}
+-----------------------------------------------------------------------------------------    
+static class
+    -can only be created inside a class
+    -can only access the static members of the class in which it is created
+
+public class OuterClass {
+    private static String msg = "Hello";
+    
+    // Static inner class
+    public static class StaticInner {
+        public void display() {
+            System.out.println(msg); // Can access static members
+        }
+    }
+}
+-----------------------------------------------------------------------------------------
+-static block
+    -executed before the main function
+    used for static initialization
+
+public class DatabaseConfig {
+    private static String url;
+    private static String username;
+    
+    // Static initialization block
+    static {
+        url = "jdbc:mysql://localhost:3306/db";
+        username = "admin";
+        System.out.println("Static block executed");
+    }
+}
+-----------------------------------------------------------------------------------------

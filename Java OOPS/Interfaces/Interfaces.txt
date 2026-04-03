@@ -1,0 +1,25 @@
+By default 
+  --every variable in an interface are public static final
+  --the public static final variables inside the interface can be accessed by the static and non static methods of the implementing class
+
+  --every method in an interface are public and abstract
+  --overriding class must declare the method as public
+
+
+public interface InterfaceClass {
+    // Implicitly public and abstract
+    void start();
+    void stop();
+}
+
+public class ImplementingClass implements InterfaceExample {
+    @Override
+    public void method1() {
+        System.out.println("Method 1");
+    }
+    
+    @Override
+    public void method2() {
+        System.out.println("Method 2");
+    }
+}
